@@ -1,0 +1,148 @@
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+
+		
+		<meta name="apple-mobile-web-app-title" content="CodePen">
+		
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">		
+		<title>Route Geniustracks | 6 Wheel</title> 
+		<style>
+			.BG{
+				margin:0;
+				padding:0;
+				background-size: 100% 100%;
+				font-family:Helvetica,Arial,sans-serif;
+				line-height: 1;
+				text-align: center;
+			}
+			#button {
+			  display: inline-block;
+			  background-color: #27aae0;
+			  width: 50px;
+			  height: 50px;
+			  text-align: center;
+			  border-radius: 4px;
+			  position: fixed;
+			  bottom: 30px;
+			  right: 30px;
+			  transition: background-color .3s, 
+				opacity .5s, visibility .5s;
+			  opacity: 0;
+			  visibility: hidden;
+			  z-index: 1000;
+			}
+			#button::after {
+			  content: "\f077";
+			  font-family: FontAwesome;
+			  font-weight: normal;
+			  font-style: normal;
+			  font-size: 2em;
+			  line-height: 50px;
+			  color: #fff;
+			}
+			#button:hover {
+			  cursor: pointer;
+			  background-color: #333;
+			}
+			#button:active {
+			  background-color: #555;
+			}
+			#button.show {
+			  opacity: 1;
+			  visibility: visible;
+			}
+
+			/* Styles for the content section */
+
+			.content {
+			  width: 77%;
+			  margin: 50px auto;
+			  font-family: 'Merriweather', serif;
+			  font-size: 17px;
+			  color: #6c767a;
+			  line-height: 1.9;
+			}
+			@media (min-width: 500px) {
+			  .content {
+				width: 43%;
+			  }
+			  #button {
+				margin: 30px;
+			  }
+			}
+			.content h1 {
+			  margin-bottom: -10px;
+			  color: #03a9f4;
+			  line-height: 1.5;
+			}
+			.content h3 {
+			  font-style: italic;
+			  color: #96a2a7;
+			}
+		</style>
+
+		<script>
+			window.console = window.console || function(t) {};
+		</script>
+
+
+
+		<script>
+			if (document.location.search.match(/type=embed/gi)) 
+			{
+				window.parent.postMessage("resize", "*");
+			}
+		</script>
+	</head>
+
+	<body class="BG">
+		<!-- Back to top button -->
+		<a id="button" class="show"></a>
+
+
+		<!-- Some content to fill up the page -->		   
+		<img src="image/HD_2.jpg" width = "100%">
+
+
+		<img src="image/calenda.jpg" usemap="#image-map">
+		<map name="image-map">
+			<area target="" alt="" title="" href="./6Wheel_D10.html" coords="246,679,320,753" shape="rect">
+			<area target="" alt="" title="" href="./6Wheel_D11.html" coords="324,680,402,750" shape="rect">
+		</map>
+
+
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.269854123892!2d100.4840166148319!3d13.882806090262767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e284d7b6882155%3A0x2d893f3c41a0b484!2sDepartment%20of%20Internal%20Trade%2C%20Ministry%20of%20Commerce!5e0!3m2!1sen!2sth!4v1620571710988!5m2!1sen!2sth" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		<img src="image/Footer_2.jpg" width = "100%">
+
+		<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+		<script id="rendered-js">
+			var btn = $('#button');
+
+			$(window).scroll(function () 
+			{
+				if ($(window).scrollTop() > 300) 
+				{
+					btn.addClass('show');
+				} 
+				else {
+					btn.removeClass('show');
+				}
+			});
+
+			btn.on('click', function (e) 
+			{
+				e.preventDefault();
+				$('html, body').animate({ scrollTop: 0 }, '300');
+			});
+			//# sourceURL=pen.js
+		</script>
+ 
+	</body>
+</html>
